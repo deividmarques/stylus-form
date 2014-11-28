@@ -1,0 +1,75 @@
+.doc-menu
+  +single-transition(transform, .25s, linear)
+  background: #fff
+  border-right: 1px solid $gray1
+  float: left
+  height: 100%
+  position: fixed
+  top: 95px
+  padding: $default-space
+  width: $with-sidebar
+  z-index: 3
+
+  .doc-menu-hide &
+    +single-transition(transform, .25s, linear)
+    webkit-transform: translate3d(0, -150%, 0)
+    transform: translate3d(0, -150%, 0)
+
+  ul
+    list-style: none
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+    -moz-overflow-scrolling: touch
+    -ms-overflow-scrolling: touch
+    overflow-scrolling: touch
+
+  .doc-menu-title
+    color: $gray3
+    font-size: 16px
+    font-weight: bold
+    border-top: 1px solid $gray1
+    margin-top: 10px
+    padding: 10px 12px
+
+
+  .doc-submenu
+
+    li
+      padding: 5px 0
+
+  .doc-menu-link
+    border-left: 3px solid transparent
+    color: $gray2
+    display: block
+    padding-left: 10px
+
+
+    &[class*="doc-ico"]
+      color: $gray3
+      font-size: 16px
+      font-weight: bold
+
+    &.doc-active,
+    &:hover,
+    &:focus
+      border-color: $gray2
+
+
+@media screen and (max-width: $screen-sm)
+
+  .doc-nav
+    display: none
+
+  .doc-menu
+    +translate(-$with-sidebar, 0)
+    top: 95px
+
+    .doc-menu-hide &
+      +translate(0, 0)
+
+@media screen and (max-width: $screen-xs)
+  .doc-menu
+    top: 90px
+
+    ul
+      height: 80%

@@ -1,0 +1,83 @@
+*
+  padding: 0
+  margin: 0
+  +box-sizing(border-box)
+
+*:after,
+*:before
+  +box-sizing(border-box)
+
+html,
+body
+  height: 93%
+  font-size: 100%
+  line-height: 1
+
+body
+  font-family: 'Ubuntu', sans-serif
+  background: #e9eaed
+  -webkit-overflow-scrolling: touch
+  -moz-overflow-scrolling: touch
+  -ms-overflow-scrolling: touch
+  overflow-scrolling: touch
+a
+  text-decoration: none
+
+h1, h2, h3, h4, h5, h6
+  color: $gray2
+  font-weight: normal
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-smoothing: antialiased
+
+.doc-content
+  +single-transition(all, .25s, linear)
+  background: #fff
+  box-shadow: 0 1px 10px rgba(0,0,0,.2)
+  margin: 120px $default-space 0 $with-sidebar + 20px
+  min-height: 100%
+  padding: 20px
+  position: relative
+  z-index: 1
+
+  .doc-menu-hide &
+    +single-transition(all, .25s, linear)
+    margin-left: $default-space
+
+  hr
+    border: none
+    border-top: 1px solid $gray1
+    height: 1px
+    margin: 20px 0
+  p
+    color: #333
+    font-size: 14px
+    line-height: 1.3
+    margin-bottom: 10px
+
+.doc-home
+  h1,h2,h3
+    padding-bottom: 10px
+
+
+.doc-title-main
+  color: $gray3
+  font-size: 26px
+  border-bottom: 1px solid $gray1
+  margin: 0 -20px 20px
+  padding: 0 20px
+
+  .index &
+    text-align: center
+
+@media screen and (max-width: $screen-sm)
+
+  .doc-content
+    margin: 120px $default-space 0
+
+@media screen and (max-width: $screen-xs)
+  .doc-content
+    margin: 105px $default-space-xs 0
+
+    .doc-menu-hide &
+      margin-left: 10px

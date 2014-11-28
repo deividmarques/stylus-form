@@ -1,0 +1,122 @@
+.doc-header
+  background: #fff
+  border-bottom: 1px solid $gray1
+  color: #fff
+  padding: 10px $default-space 0
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 4
+
+  .doc-header-title
+    padding-left: 40px
+
+    a
+      color: $gray3
+      font-family: 'Hammersmith One', sans-serif
+      padding-bottom: 3px
+      padding-top: 3px
+      font-size: 24px
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      display: inline-block
+      max-width: 700px
+
+  .doc-menu-btn
+    border: 1px solid $gray1
+    background: #f0f0f0
+    cursor: pointer
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    position: absolute
+    box-shadow: 0 1px 0 rgba(0,0,0,0.10)
+    height: 28px
+    top: $default-space-xs
+    left: $default-space
+    width: 30px
+
+    .doc-menu-sandwich
+      top: -7px
+      left: 4px
+
+    .doc-menu-sandwich,
+    .doc-menu-sandwich:before,
+    .doc-menu-sandwich:after
+      content: ""
+      width: 20px
+      height: 3px
+      background-color: $gray2
+      display: block
+      position: relative
+
+    .doc-menu-sandwich:before,
+    .doc-menu-sandwich:after
+      margin-top: 3px
+      top: 6px
+
+    &:focus,
+    &:hover
+      background: $gray2
+
+      .doc-menu-sandwich,
+      .doc-menu-sandwich:before,
+      .doc-menu-sandwich:after
+        background-color: #fff
+
+  .doc-nav
+    border-top: 1px solid $gray1
+    margin-top: $default-space-xs
+    margin-left: -$default-space
+    margin-right: -$default-space
+    padding: 0 $default-space
+    text-align: center
+
+    li
+      display: inline-block
+      margin: 0 $default-space-xs
+
+  .doc-nav-link
+    color: $gray2
+    display: inline-block
+    padding: $default-space-xs 0
+    border-bottom: 3px solid
+    border-color: transparent
+
+    &.doc-active,
+    &:focus,
+    &:active,
+    &:hover
+      border-color: $gray3
+
+
+@media screen and (max-width: $screen-lg)
+  .doc-header
+    .doc-header-title
+      text-align: left
+      padding-left: 40px
+
+@media screen and (max-width: $screen-md)
+  .doc-header
+    .doc-header-title a
+      max-width: 360px
+
+@media screen and (max-width: $screen-sm)
+  .doc-header
+    .doc-header-title
+      text-align: left
+      font-size: 20px
+
+      a
+        max-width: 380px
+
+@media screen and (max-width: $screen-xs)
+  .doc-header
+    padding: $default-space-xs $default-space-xs 0
+
+    .doc-header-title a
+      max-width: 280px
+
+    .doc-menu-btn
+      left: $default-space-xs

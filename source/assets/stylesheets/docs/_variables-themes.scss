@@ -1,0 +1,29 @@
+//
+// Default colors of themes and other elements.
+//
+
+// Base theme colors. Primary colors used in themes.
+$color-blue:        #254fa2;
+$color-gold:        #a38e17;
+$color-green:       #25b89a;
+$color-orange:      #fca400;
+$color-cyanogen:    #00c9f5;
+$color-red:         #ef1e37;
+$color-wine:        #513335;
+
+// Color that will be mixed with the main color of each theme.
+$color-mix: #000;
+
+// Percentage of adding color above in the main theme color.
+$color-mix-20: 20%;
+
+// Below is the mixture of the colors of the themes.
+$themes-colors: (
+  blue        : (color1: $color-blue, color2: mix($color-mix, $color-blue, $color-mix-20)),
+  gold        : (color1: $color-gold, color2: mix($color-mix, $color-gold, $color-mix-20)),
+  green       : (color1: $color-green, color2: mix($color-mix, $color-green, $color-mix-20)),
+  orange      : (color1: $color-orange, color2: mix($color-mix, $color-orange, $color-mix-20)),
+  cyanogen    : (color1: $color-cyanogen, color2: mix($color-mix, $color-cyanogen, $color-mix-20)),
+  red         : (color1: $color-red, color2: mix($color-mix, $color-red, $color-mix-20)),
+  wine        : (color1: $color-wine, color2: mix($color-mix, $color-wine, $color-mix-20))
+);
