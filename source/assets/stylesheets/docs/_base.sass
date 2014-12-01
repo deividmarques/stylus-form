@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6
   font-smoothing: antialiased
 
 .doc-content
-  +single-transition(all, .25s, linear)
+  +single-transition(margin-left, .25s, linear)
   background: #fff
   box-shadow: 0 1px 10px rgba(0,0,0,.2)
   margin: 120px $default-space 0 $with-sidebar + 20px
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6
   z-index: 1
 
   .doc-menu-hide &
-    +single-transition(all, .25s, linear)
+    +single-transition(margin-left, .25s, linear)
     margin-left: $default-space
 
   hr
