@@ -1,0 +1,131 @@
+[class*="stylus-field"],
+textarea
+  +box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075))
+  +transition(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s)
+  font-family: Open Sans, Arial, Helvetica, Sans-serif
+  font-size: remtopx(.8125)
+  padding: 6px 11px 7px
+  vertical-align: middle
+  background-color: #fff
+  background-image: none
+  border: 1px solid $gray2
+  border-radius: $default-radius
+  line-height: 1.42857143
+  width: 100%
+
+  // [class*="stylus-form-inline"] &
+  //   width: auto
+
+  .stylus-label[class*="col-"] &
+
+    // [class*="stylus-form-inline"] &
+    //   width: 100%
+
+  &[disabled]
+    border-color: $gray1
+    background-color: $gray0
+
+  &.stylus-field-lg
+    font-size: remtopx(1)
+    padding: 11px
+
+  &.stylus-field-md
+    font-size: remtopx(.8125)
+    padding: 6px 11px 7px
+
+  &.stylus-field-sm
+    font-size: remtopx(.75)
+    padding: 5px 11px
+
+  &.stylus-field-xs
+    font-size: remtopx(.75)
+    padding: 2px 11px
+
+  &.stylus-field-sm,
+  &.stylus-field-xs
+    line-height: 1.5
+
+
+
+
+
+
+[class*="stylus-form"]
+
+  margin-left: -15px
+  margin-right: -15px
+
+  [class*="stylus-title"] + &
+    padding-top: 15px
+
+  [class*="stylus-actions-btn"]
+    margin: 0 15px
+
+    [class*="stylus-btn"] + [class*="stylus-btn"]
+      margin-left: 15px
+
+  // .row ~ [class*="stylus-actions-btn"]
+  //   margin-top: 25px
+  //   margin-left: 0
+
+
+  // Element that envolve the label and the input field. This class can be inserted on tag label or anyother
+  .stylus-label
+    display: block
+    float: none
+    vertical-align: top
+    margin-bottom: 15px
+
+    // &:after
+    //   content: ""
+    //   display: block
+    //   clear: both
+
+
+
+    .stylus-label-text,
+    label
+      display: block
+      color: $gray4
+      line-height: $input-height/2 * 1.2
+      font-size: remtopx(.875)
+      margin-right: 5px
+      padding-left: 0
+      padding-right: 0
+
+    .stylus-label-text ~ label
+      font-weight: normal
+
+    &.stylus-label-warning
+      .stylus-label-text,
+      .stylus-help-message
+        color: $color-warning
+
+      input,
+      textarea
+        border-color: $color-warning
+
+    &.stylus-label-success
+      .stylus-label-text,
+      .stylus-help-message
+        color: $color-success
+
+      input,
+      textarea
+        border-color: $color-success
+
+    &.stylus-label-error
+      .stylus-label-text,
+      .stylus-help-message
+        color: $color-danger
+
+      input,
+      textarea
+        border-color: $color-danger
+
+
+  textarea
+  resize: none
+
+  .stylus-help-message
+    font-size: remtopx(.8125)

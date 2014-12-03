@@ -1,0 +1,86 @@
+[class*="stylus-form-inline"]
+  // @extend .stylus-clearfix
+  margin-right: 0
+
+  // &.row
+  //   margin-right: 0
+
+  .stylus-label
+    display: inline-block
+    margin-right: 15px
+    margin-bottom: 15px
+
+    & + [class*="stylus-btn"]
+      margin-left: 0
+
+    .stylus-label-text
+      float: none
+      display: inline-block
+      margin-right: 5px
+
+    &[class*="stylus-label-"]
+      float: left // is necessary
+      display: inline-table // is necessary
+      margin-right: 0
+
+      .stylus-label-text
+        display: table-cell
+        padding-right: 10px
+        vertical-align: middle
+        white-space: nowrap
+        width: 1%
+
+  [class*="stylus-actions-btn"]
+    float: left
+    margin-right: 0
+
+    &.stylus-actions-btn-block
+      float: none
+      display: block
+      clear: both
+
+    [class*="stylus-btn"]
+      vertical-align: super
+
+    .stylus-info
+      display: inline-block
+      width: auto
+
+.stylus-form-inline-block
+
+  .stylus-label
+    &[class*="col-"]
+      .stylus-label-text
+        display: block
+
+@media screen and (max-width: $screen-sm)
+
+  [class*="stylus-form-inline"]
+
+    .stylus-label
+
+      .stylus-label-text
+        display: block
+
+    [class*="stylus-actions-btn"]
+      clear: both
+      display: block
+      float: none
+
+    [class*="stylus-btn"]
+      margin-left: 0
+
+      & + [class*="stylus-btn"]
+        margin-left: 15px
+
+@media screen and (min-width: $screen-sm)
+  [class*="stylus-form-inline"]
+
+    [class*="stylus-actions-btn"]
+      padding: 0
+      margin: 0 0 0 15px
+      border: 0
+
+  .stylus-form-inline-block
+    [class*="stylus-actions-btn"]
+      margin-top: 19px
