@@ -1,45 +1,10 @@
 ---
 title: Inline Form
 ---
-<div class="doc-home doc-content">
+<div class="doc-content">
   <h1 class="doc-title-main"><%= data.page.title %></h1>
-  <form action="" class="stylus-form-inline">
-    <fieldset>
-      <legend>Simple example</legend>
-      <label for="fieldOne" class="stylus-label stylus-label-xs">
-        <b class="stylus-label-text" >Name</b>
-        <input type="text" class="stylus-field" id="fieldOne">
-      </label>
-      <label for="fieldTwo" class="stylus-label stylus-label-xs">
-        <b class="stylus-label-text">E-mail</b>
-        <input type="email" class="stylus-field" id="fieldTwo">
-      </label>
-      <div class="stylus-actions-btn">
-        <button class="stylus-btn">Save</button>
-      </div>
-    </fieldset>
-	</form>
-
-  <form action="" class="stylus-form-inline">
-    <fieldset>
-      <legend>Example with select</legend>
-      <label for="fieldThree" class="stylus-label stylus-label-xs">
-        <b class="stylus-label-text">Name</b>
-        <input type="text" class="stylus-field" id="fieldThree">
-      </label>
-      <label for="fieldFour" class="stylus-label stylus-label-xs">
-        <b class="stylus-label-text">Gender</b>
-        <div class="stylus-select">
-          <select class="stylus-field" id="fieldFour">
-            <option value="">Selecione</option>
-            <option value="">Male</option>
-            <option value="">Female</option>
-          </select>
-        </div>
-      </label>
-      <div class="stylus-actions-btn">
-        <button class="stylus-btn">Save</button>
-      </div>
-    </fieldset>
-  </form>
+  <div class="doc-demo">
+    <%= partial 'doc/partials/inline-form' %>
+  </div>
+  <% code("html") do %><%= partial 'doc/partials/inline-form' %><% end %>
 </div>

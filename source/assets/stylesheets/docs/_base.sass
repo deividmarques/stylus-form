@@ -70,6 +70,24 @@ h1, h2, h3, h4, h5, h6
   .index &
     text-align: center
 
+.doc-demo
+  border: 1px solid $gray0
+  position: relative
+  padding: 40px 20px 20px
+
+  &:before
+    content: "Exemplo"
+    position: absolute
+    top: 0
+    left: 0
+    font-size: 11px
+    border-bottom: 1px solid #e1e1e8
+    border-right: 1px solid #e1e1e8
+    display: inline-block
+    background: #efefef
+    color: #666666
+    padding: 5px 10px
+
 @media screen and (max-width: $screen-sm)
 
   .doc-content

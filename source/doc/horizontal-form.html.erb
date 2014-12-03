@@ -1,45 +1,10 @@
 ---
 title: Horizontal Form
 ---
-<div class="doc-home doc-content">
+<div class="doc-content">
   <h1 class="doc-title-main"><%= data.page.title %></h1>
-  <form action="" class="stylus-form-horizontal">
-    <fieldset>
-      <label for="fiedlOne" class="stylus-label stylus-label-sm">
-        <b class="stylus-label-text">Name</b>
-        <input type="text" class="stylus-field" id="fiedlOne">
-      </label>
-      <label for="fieldTwo" class="stylus-label stylus-label-sm">
-        <b class="stylus-label-text">Last Name</b>
-        <input type="text" class="stylus-field" id="fieldTwo">
-      </label>
-      <label for="fieldThree" class="stylus-label stylus-label-sm">
-        <b class="stylus-label-text">E-mail</b>
-        <input type="email" class="stylus-field" id="fieldThree">
-      </label>
-      <label for="fieldFour" class="stylus-label stylus-label-sm">
-        <b class="stylus-label-text">Phone</b>
-        <input type="tel" class="stylus-field" id="fieldFour">
-      </label>
-      <label for="fieldFive" class="stylus-label stylus-label-sm">
-        <b class="stylus-label-text">City</b>
-        <input type="text" class="stylus-field" id="fieldFive">
-      </label>
-      <label for="fieldSix" class="stylus-label stylus-label-sm">
-        <b class="stylus-label-text">Country</b>
-        <div class="stylus-select">
-          <select name="" id="fieldSix" class="stylus-field">
-            <option value="">Select...</option>
-            <option value="">Country One</option>
-            <option value="">Country Two</option>
-          </select>
-        </div>
-      </label>
-      <div class="stylus-actions-btn">
-        <button class="stylus-btn">Save</button>
-        <button class="stylus-btn">Cancel</button>
-      </div>
-    </fieldset>
-  </form>
-
+  <div class="doc-demo">
+    <%= partial 'doc/partials/horizontal-form' %>
+  </div>
+  <% code("html") do %><%= partial 'doc/partials/horizontal-form' %><% end %>
 </div>
