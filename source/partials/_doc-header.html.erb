@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="<%= page_classes %>">
+<html lang="en" class="<%= page_classes %>">
 <head>
   <meta charset="UTF-8">
-  <title><%= "#{data.page.title} - EA Style Framework" || "EA Style Framework" %></title>
+  <title><%= "#{data.page.title}" %> - Stylus Form</title>
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="description" content="<%= current_page.data.description %>" />
   <meta name="keywords" content="<%= current_page.data.keywords %>" />
-  <%= stylesheet_link_tag "base" %>
+  <%= stylesheet_link_tag "base", "style" %>
 
 </head>
 <body class="<%= page_classes %>">
@@ -15,10 +15,10 @@
   <header class="doc-header">
     <button class="doc-menu-btn"><span class="doc-menu-sandwich"></span></button>
     <h1 class="doc-header-title">
-      <a href="/" title="Ir para a página inicial">Style Form</a>
+      <a href="/" title="Go to home">Stylus Form</a>
     </h1>
     <form action="" class="doc-search">
-      <input autofocus type="search" class="doc-search-input" placeholder="Faça sua busca aqui">
+      <input autofocus type="search" class="doc-search-input" placeholder="Search here">
       <div class="doc-search-results"></div>
     </form>
   </header>
