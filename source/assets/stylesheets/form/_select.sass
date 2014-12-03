@@ -1,0 +1,82 @@
+.stylus-select
+  display: inline-block
+  position: relative
+  border: 1px solid $gray2
+  border-radius: $default-radius
+  overflow: hidden
+  vertical-align: middle
+  width: 100%
+
+  .stylus-form-horizontal .stylus-label &
+    clear: both
+    display: block
+
+  &[disabled],
+  .stylus-form-disable &
+    border-color: $gray1
+
+  select
+    position: relative
+    +box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075))
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    height: 31px
+    padding: 5px 35px 5px 10px
+    display: inline-block
+    border: none
+    background: #fff
+    font-size: remtopx(.875)
+    color: $gray4
+    width: 145%
+    z-index: 1
+
+    option
+      padding: 5px 10px
+
+    &[disabled],
+    .stylus-form-disable &
+      background: $gray1
+
+  &:before
+    content: ""
+    width: 0
+    height: 0
+    margin-left: 5px
+    border-style: solid
+    border-width: 5px
+    border-color: #555555 transparent transparent transparent
+    position: absolute
+    top: 50%
+    margin-top: -2px
+    right: 15px
+    z-index: 2
+    pointer-events: none
+
+  &.stylus-field-lg
+    height: $input-lg-height
+
+    select
+      height: $input-lg-height
+      font-size: remtopx(1)
+
+  &.stylus-field-md
+    height: $input-height
+
+    select
+      height: $input-height
+      font-size: remtopx(.8125)
+
+  &.stylus-field-sm
+    height: $input-sm-height
+
+    select
+      height: $input-sm-height
+      font-size: remtopx(.75)
+
+  &.stylus-field-xs
+    height: $input-xs-height
+
+    select
+      height: $input-xs-height
+      font-size: remtopx(.75)
